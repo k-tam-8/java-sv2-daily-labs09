@@ -9,9 +9,12 @@ public class Concert {
     private List<Person> personList = new ArrayList<>();
 
     public void addPerson(Person person, LocalDateTime dateTime){
-        if (person.getTicket().entryTime().isAfter(dateTime.toLocalTime())) {
+        if (person.getTicket().entryTime().isBefore(dateTime.toLocalTime())) {
             personList.add(person);
         } else throw new IllegalArgumentException("Még nem mehet be!");
     }
 
+    public List<Person> getPersonList() {
+        return personList;
+    }
 }
