@@ -29,7 +29,7 @@ class TicketTest {
         LocalDateTime dateTime = LocalDateTime.of(2000,1,1,14,30);
         LocalDateTime dateTime2 = LocalDateTime.of(2000,1,1,10,30);
         person.setTicket(new Ticket("Slayer", LocalDateTime.of(2000,1,1,15,0)));
-        
+
         concert.addPerson(person, dateTime);
         assertEquals(1, concert.getPersonList().size());
 
